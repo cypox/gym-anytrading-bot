@@ -1,0 +1,7 @@
+gym==0.21.0
+gym_anytrading==1.3.2
+gym_mtsim==1.3.0
+matplotlib==3.7.1
+numpy==1.24.3
+pytz==2023.3
+stable_baselines3==1.8.0
