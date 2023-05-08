@@ -46,12 +46,13 @@ env = MtEnv(
     # time_points=[desired time points ...],
     hold_threshold=0.5,
     close_threshold=0.5,
-    fee=lambda symbol: {
-        'AAPL': max(1.0, np.random.normal(1, 0.5)),
-        'TSLA': max(1.0, np.random.normal(1, 0.5)),
-        'MSFT': max(1.0, np.random.normal(1, 0.5)),
-        'GOGL': max(1.0, np.random.normal(1, 0.5)),
-    }[symbol],
+    fee=1,
+    # fee=lambda symbol: {
+    #     'AAPL': max(1.0, np.random.normal(1, 0.5)),
+    #     'TSLA': max(1.0, np.random.normal(1, 0.5)),
+    #     'MSFT': max(1.0, np.random.normal(1, 0.5)),
+    #     'GOGL': max(1.0, np.random.normal(1, 0.5)),
+    # }[symbol],
     symbol_max_orders=2,
     multiprocessing_processes=2
 )
