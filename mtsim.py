@@ -22,7 +22,7 @@ df = yf.download('AAPL', period='7d', interval='1m')
 sim = MtSimulator(
     unit='USD',
     balance=200.,
-    leverage=1.,
+    leverage=0.,
     stop_out_level=0.2,
     hedge=False,
     symbols_filename=STOCKS_DATA_PATH
@@ -59,7 +59,7 @@ env = MtEnv(
 # env = gym.make('forex-hedge-v0')
 
 train = False
-model_file = 'a2d_200k_trained.model'
+model_file = 'a2d_500k_trained.model'
 if train:
     model = A2C('MultiInputPolicy', env, verbose=0, tensorboard_log="./a2c_cartpole_tensorboard/")
     model.learn(total_timesteps=500000)
